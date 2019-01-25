@@ -1,8 +1,8 @@
-#Description du projet
+# Description du projet
 
 Le projet avait pour but de construire un classifieur qui, à partir des fréquences d'apparition de chaque lettre dans un échantillon d'apprentissage en anglais et dans un échantillon d'apprentissage en français, permet de dire si un test test est en français ou en anglais. 
 
-#Principe de fonctionnement
+# Principe de fonctionnement
 
 Le principe est de prendre un échantillon d'apprentissage assez grand en français et en anglais. J'ai utilisé pour les échantillons d'apprentissage le livre Alice au Pays des Merveilles (les fichiers alice_Fr et alice.En). J'ai quelques textes à tester de longueurs diverses (il s'agit des fichiers .txt). 
 

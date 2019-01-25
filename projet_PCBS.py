@@ -6,6 +6,7 @@ alphabet = "azertyuiopqsdfghjklmwxcvbnéàçàâôöêë"
 
 
 def empty_dictionnary():
+    """ Creates an empty dictionnary, no argument"""
     dictionnary = {}
 
     for i in alphabet :
@@ -14,7 +15,8 @@ def empty_dictionnary():
     return dictionnary
 
 def create_dictionnary(text):
-    """ """
+    """ Creates a dictionnary to stock lettres and their number of occurences, takes a text in argument"""
+
     dictionnary = empty_dictionnary()
     
     for line in text :
@@ -26,11 +28,14 @@ def create_dictionnary(text):
 
 
 def sum_letters(dictionnary):
+    """Sums the total number of letters in a text file, takes a dictionnary associating each letter with their number of occurences in argument"""
 
     return sum(dictionnary[letter] for letter in alphabet)
 
 
 def frequency(text):
+    """Computes the frequency of each letters in a text file, takes a text in argument"""
+
     freq = empty_dictionnary()
     dictionnary = create_dictionnary(text)
     s = sum_letters(dictionnary)
@@ -42,6 +47,8 @@ def frequency(text):
     return freq
 
 def distance(dictionnary1, dictionnary2):
+    """Computes the distance between the frequencies of each letters in a test file and a learning file, takes two dictionnaries associating each letter with their 
+    frequences in argument"""
 
     dist = 0
 
@@ -52,6 +59,7 @@ def distance(dictionnary1, dictionnary2):
 
 
 def save(dictionnary, file):
+    """"Saves a file with the elements stocked in the dictionnary takes a file and a dictionnary associating each letter with their frequences in argument"""
     f = open(file, "w+")
 
     for letter in alphabet:
@@ -61,6 +69,8 @@ def save(dictionnary, file):
 
 
 def load(file):
+    """loads a file and fills a dictionnary with its elements, takes a file for its argument"""
+
     freq = empty_dictionnary()
 
     f = open(file, "r")
@@ -74,6 +84,8 @@ def load(file):
     return freq
 
 def compare(text):
+    """Compares the distances between the test text and the french training text and between the test text and the english training text
+    returns minimum distance and thus gives the language of the test text""" 
 
     if os.path.isfile("./freq_FR.txt"):
         freq_FR = load("freq_FR.txt")
