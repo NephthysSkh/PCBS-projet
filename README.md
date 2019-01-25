@@ -4,7 +4,7 @@ Le projet avait pour but de construire un classifieur qui, à partir des fréque
 
 # Principe de fonctionnement
 
-Le principe est de prendre un échantillon d'apprentissage assez grand en français et en anglais. J'ai utilisé pour les échantillons d'apprentissage le livre Alice au Pays des Merveilles (les fichiers alice_Fr et alice.En). J'ai quelques textes à tester de longueurs diverses (il s'agit des fichiers .txt). 
+Le principe est de prendre un échantillon d'apprentissage assez grand en français et en anglais. J'ai utilisé pour les échantillons d'apprentissage le livre Alice au Pays des Merveilles (les fichiers alice_Fr et alice.En). J'ai quelques textes à tester de longueurs diverses (il s'agit des fichiers .txt). Comme à l'ouverture du fichier, on précise qu'on veut toutes les lettres en minuscules, et qu'on prend en compte les accents, pas besoin de tockenizer le texte plus que ça. 
 
 1. Dans un premier temps, on définit une fonction qui permet de créer un dictionnaire vide qui associe à chaque lettre de l'alphabet définit en variable globale la valeur 0, c'est la fonction empty_dictionnary, qui ne prend pas d'argument.
 
